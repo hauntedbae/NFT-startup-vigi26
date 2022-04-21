@@ -1,0 +1,153 @@
+body, h1, h2 {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header img {
+    width: 100%;
+}
+
+*{
+    margin: 0;
+}
+
+.title {
+    cursor: pointer;
+}
+
+.navbar {
+    display: flex;
+    top: 0;
+    height: 10vh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-sub {
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-item {
+    padding: 10px;
+    list-style: none;
+}
+
+.nav-link {
+    color: #86888A;
+    text-decoration: none;
+}
+
+.ham {
+    display: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    display: block;
+    width: 35px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #d3d3d3;
+    transition: 0.4s;
+}
+
+.news {
+    color: #181A18; 
+}
+
+.card {
+    display: flex;
+    
+}
+
+.news h4 {
+    margin: 20px;
+    color: #ff1493;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.news h1 {
+    margin: 20px;
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.card img {
+    width: 50%;
+}
+
+button {
+    margin: 20px;
+    padding: 16px 28px;
+    border: 4px solid;
+    border-color: url(./background.svg);
+    background-color: #fff;
+    border-radius: 30px;
+    color:#181A18;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.card1 {
+    background-size: cover;
+    padding: 50px 20px 10px 20px;
+    background-image: url(./background.svg);
+    margin: 20px 0;
+    color:#181A18;
+}
+
+.card1 h2 {
+    font-size: 45px;
+    font-weight: 500;
+}
+
+.card1 p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 768px) {
+    *{
+        overflow: hidden;
+    }
+
+    .nav-sub {
+        position: absolute;
+        top: 10vh;
+        right: 0px;
+        flex-direction: column;
+        background-color: #86888A;
+        border-radius: 0 0 0 20px;
+        transition: transform 0.3s ease-in;
+        transform: translate(100%);
+    }
+
+    .nav-change {
+        transform: translate(0%);
+    }
+
+    .ham {
+        display: block;
+    }
+
+    .change .bar1 {
+        transform: rotate(45deg) translate(8px, 3px);
+    }
+
+    .change .bar2 {
+        opacity: 0;
+    }
+
+    .change .bar3 {
+        transform: rotate(-45deg) translate(8px, -3px);
+    }
+
+    .news {
+        color: #181A18; 
+    }
+}
+
